@@ -5,7 +5,9 @@ st.title("🌞 تقييم يومك")
 
 st.write("مرحبًا! خلينا نقيم يومك النهارده مع بعض 😊")
 
-# دالة لحساب تقييم النوم
+# ==============================
+# 💤 دالة لحساب تقييم النوم
+# ==============================
 def calculate_sleep(hours_sleep):
     if hours_sleep >= 9:
         return 10
@@ -16,7 +18,9 @@ def calculate_sleep(hours_sleep):
     else:
         return 3
 
-# دالة لحساب المزاج
+# ==============================
+# 🙂 دالة لحساب المزاج
+# ==============================
 def calculate_mood(users_mood):
     if users_mood == 5:
         return 10
@@ -29,7 +33,9 @@ def calculate_mood(users_mood):
     elif users_mood == 1:
         return 2
 
-# دالة لحساب الإنتاجية
+# ==============================
+# 💪 دالة لحساب الإنتاجية
+# ==============================
 def calculate_productivity(users_productivity):
     if users_productivity == 5:
         return 10
@@ -42,12 +48,16 @@ def calculate_productivity(users_productivity):
     elif users_productivity == 1:
         return 2
 
-# دالة حساب التقييم النهائي
-def calculate_final_evaluation(hours_sleep, users_mood, users_productivity):
-    total = (hours_sleep + users_mood + users_productivity) / 3
+# ==============================
+# 🎯 دالة لحساب التقييم النهائي
+# ==============================
+def calculate_final_evaluation(sleep_score, mood_score, productivity_score):
+    total = (sleep_score + mood_score + productivity_score) / 3
     return total
 
-# واجهة المستخدم
+# ==============================
+# 🧭 واجهة المستخدم
+# ==============================
 st.header("📝 أدخل تقييمك:")
 
 hours_sleep = st.slider("كم ساعة نمت؟", 0, 12, 7)
@@ -68,4 +78,4 @@ if st.button("احسب تقييمي 🎯"):
         st.info(f"🙂 يومك جيد! تقييمك: {evaluation:.1f}")
     else:
         st.warning(f"😴 يومك محتاج راحة! تقييمك: {evaluation:.1f}")
-day_evaluation_app.py
+
